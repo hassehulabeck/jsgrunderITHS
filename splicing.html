@@ -1,0 +1,19 @@
+<html>
+<script>
+
+var orginal = [1,2,3,4];
+
+var tom = [];
+
+var element = orginal.splice(2,1);
+
+// För att slippa lägga in en array i en array,
+// tar vi första (och enda) elementet i det vi
+// plockade ut från orginal.
+tom.push(element[0]);
+
+console.log(orginal + "\n");
+console.log(tom);
+
+</script>
+</html>

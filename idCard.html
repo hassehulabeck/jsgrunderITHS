@@ -1,0 +1,23 @@
+<html>
+<script>
+
+var name = "Hans";
+var email = "hans@zocom.se";
+
+var idCard = createIdCard();
+console.log(idCard);
+
+function createIdCard(name = "Ola", email = "o@o.se") {
+  var htmlString = "";
+
+  htmlString += "<div>";
+  htmlString += "<h1>" + name + "</h1>";
+  htmlString += "<p>" + email + "</p>";
+  htmlString += "</div>";
+
+  return htmlString;
+}
+
+name = "Bo";
+</script>
+</html>

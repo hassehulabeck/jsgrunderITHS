@@ -1,0 +1,27 @@
+<html>
+<script>
+
+function generateLottorad(turnummer) {
+
+  var lottorad = [];
+  var turnummer = [2,12,14];
+
+  if (typeof(turnummer) == "object") {
+    turnummer.forEach(function(item) {
+      lottorad.push(item);
+    });
+  }
+
+  while (lottorad.length < 7) {
+    let slump = Math.ceil(Math.random() * 35);
+
+    if (lottorad.indexOf(slump) == -1)
+      lottorad.push(slump);
+  }
+  return lottorad;
+}
+
+console.log(generateLottorad());
+
+</script>
+</html>

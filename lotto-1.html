@@ -1,0 +1,16 @@
+<html>
+<script>
+
+function lottorad() {
+  var retur = [];
+  for (let i = 0; i < 7; i++) {
+    let slump = Math.ceil(Math.random() * 35);
+    retur.push(slump);
+  }
+  return retur;
+}
+
+console.log(lottorad());
+
+</script>
+</html>

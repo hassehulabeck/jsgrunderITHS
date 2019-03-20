@@ -1,0 +1,12 @@
+<html>
+<script>
+
+function magicEightball (question) {
+  let answers = ['yes', 'no', 'dunno, man'];
+  let slump = Math.floor(Math.random() * answers.length);
+  return "Q:" + question + "\n" + "A:" + answers[slump];
+}
+
+console.log(magicEightball("Kommer jag att kunna lära ut om funktioner?"));
+</script>
+</html>

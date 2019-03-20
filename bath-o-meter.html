@@ -1,0 +1,48 @@
+<html>
+<script>
+
+var stefan = {
+  sunny: true,
+  minTemp: 20,
+  windy: false,
+  willBath: null
+}
+
+var olga = {
+  sunny: true,
+  minTemp: 0,
+  windy: false,
+  willBath: null
+}
+
+var actualConditions = {
+  sunny: true,
+  temp: 10,
+  windy: false
+}
+
+if
+((stefan.sunny === actualConditions.sunny) &&
+(stefan.minTemp < actualConditions.temp) &&
+(stefan.windy === actualConditions.windy)) {
+  stefan.willBath = true;
+}
+
+if
+((olga.sunny === actualConditions.sunny) &&
+(olga.minTemp < actualConditions.temp) &&
+(olga.windy === actualConditions.windy)) {
+  olga.willBath = true;
+}
+
+if ((stefan.willBath) || (olga.willBath))
+  console.log("Någon kommer att bada");
+if (stefan.willBath)
+  console.log("Stefan kommer att bada");
+if (olga.willBath)
+  console.log("Olga kommer att bada");
+if ((stefan.willBath) && (olga.willBath))
+  console.log("Stefan kommer att bada");
+
+</script>
+</html>

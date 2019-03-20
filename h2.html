@@ -1,0 +1,66 @@
+<html>
+    <script>
+    var leaderPosition = 0;
+    const distance = 20;
+
+    function Racehorse (number){
+        this.number = number;
+        this.position = 0;
+    }
+
+    // skapa fyra hästar
+
+    var horse1 = new Racehorse (1);
+    var horse2 = new Racehorse (2);
+    var horse3 = new Racehorse (3);
+    var horse4 = new Racehorse (4);
+
+
+// samla ihop alla hästar i ett stall, gör en array
+  var allHorses = [
+    horse1, horse2, horse3, horse4
+  ];
+
+
+function moveHorses() {
+
+ allHorses.forEach(function(horse){
+     let slump = Math.floor(Math.random() * 3);
+     horse.position += slump;
+
+ });
+
+}
+
+// kontrollerar om någin har vunnit
+
+while (leaderPosition < distance){
+    moveHorses();
+
+    // skriv ut hur hästarna ligger till
+    allHorses.forEach(function(horse) {
+        console.log("Häst" + horse.number + ":" + horse.position + "\n");
+        if (horse.position > leaderPosition){
+            leaderPosition = horse.Position;
+        }
+        console.log(leaderPosition);
+    });
+
+}
+
+
+
+// sortera hästarna efter deras LeaderPosition
+
+allHorses.sort(function(a, b){
+    if(a.position < b.position) return 1;
+    if(b.position > a.position) return -1;
+
+});
+
+
+    console.log(allHorses);
+
+
+    </script>
+</html>

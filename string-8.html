@@ -1,0 +1,25 @@
+<html>
+  <script>
+
+  var fullName = "HanS AnderSsoN";
+
+  // Hitta positionen för mellanslaget.
+  var space = fullName.indexOf(" ");
+
+  // Börja med att göra strängen till gemener.
+  fullName = fullName.toLowerCase();
+
+  // Plocka ut förnamnet.
+  var firstName = fullName.slice(0, space);
+
+  // Plocka ut efternamnet.
+  var lastName = fullName.substr(space + 1);
+
+  // Gör versal initialbokstav + resten av förnamnet.
+  firstName = firstName.charAt(0).toUpperCase() + firstName.substr(1);
+
+  lastName = lastName.toUpperCase();
+  console.log(firstName + " " + lastName);
+
+  </script>
+</html>

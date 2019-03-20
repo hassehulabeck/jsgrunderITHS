@@ -1,0 +1,32 @@
+<html>
+<script>
+
+// Bestämt antal
+for (var i = 10; i > 0; i--) {
+  console.log(i);
+}
+
+// Okänt antal
+var pengaBurk = [1,1,1,1,5,5,5,10,10,1,1,1,1,5];
+let summa = 0, coin=0;
+while ((coin = pengaBurk.pop()) !== undefined) {
+  summa += coin;
+}
+console.log(summa);
+
+// Okänt antal men åtminstone en
+var godisBurk = [
+  "äcklig","god","äcklig","god","god",
+  "god","äcklig","god","god","äcklig",
+  "god","god","äcklig","god","god","god",
+  "god","god","god","god","god","god"
+];
+var picked;
+do {
+  let slumpTal = Math.floor(Math.random() * godisBurk.length);
+  picked = godisBurk.splice(slumpTal,1);
+  console.log(picked);
+} while (picked != "äcklig");
+
+</script>
+</html>

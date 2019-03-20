@@ -1,0 +1,61 @@
+<html>
+<script>
+var drivingLicense = true;
+var drunk = true;
+var licenseType = "B";
+
+var drivingLicenseOk;
+
+// If, else if och else.
+if ((licenseType != "B") and (licenseType != "AB"))
+  drivingLicenseOk = false;
+
+if
+(drivingLicense) AND (!drunk) AND (drivingLicenseOk) {
+  console.log("Du får köra bil.");
+}
+
+if (x <= y)
+  console.log("X is smaller than Y.");
+
+else if (x >= y){
+  console.log("X is bigger than Y.");
+}
+else {
+  console.log("X & Y are equal.");
+}
+
+//switch
+var day = new Date();
+var week = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday"
+];
+switch (week[day.getUTCDay()]) {
+  case "monday":
+    console.log("Helgen är slut.");
+    break;
+  case "tuesday":
+    console.log("Måndagen är överstökad.");
+    break;
+  case "wednesday":
+    console.log("Lillördag.");
+    break;
+  case "thursday":
+    console.log("Svåra krysset i DN.");
+    break;
+  case "friday":
+    console.log("Äsch, jag har inte fått gjort något den här veckan.");
+    break;
+  default:
+    console.log("Helg.");
+}
+
+
+</script>
+</html>

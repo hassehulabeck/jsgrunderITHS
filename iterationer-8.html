@@ -1,0 +1,41 @@
+<html>
+<script>
+
+var fullArray = [
+  1,3,5,2,6,
+  10,2,9,8,7,
+  8,6,3,5,4,
+  6,8,4,7,4
+];
+// En array där vi lägger de valda talen
+var valdaTal = [];
+var summa = 0;
+
+while (summa < 100) {
+  let slumpTal = Math.floor(Math.random() * fullArray.length);
+
+  // Med splice plockar vi ut en del av en array.
+  // Men pass på - svaret vi får kommer i form av en array.
+  let tal = fullArray.splice(slumpTal,1);
+
+  // Därför måste vi byta typ på talet...
+  tal = parseInt(tal);
+  summa = summa + tal;
+
+  // ...alternativt få värdet från element 0 i arrayen tal.
+  summa = summa + tal[0];
+  /* Bara en av metoderna för att addera värdet i tal till summa ska användas. */
+
+  /* På samma sätt måste vi även här välja
+  om vi vill använda parseInt (omvandlar någon typ till Number)
+  eller om vi vill hämta element 0 från arrayen tal.
+  */
+  valdaTal.push(tal);
+  //eller
+  valdaTal.push(tal[0]);
+}
+console.log(valdaTal);
+
+
+</script>
+</html>

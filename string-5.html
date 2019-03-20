@@ -1,0 +1,14 @@
+<html>
+  <script>
+
+  var firstName="Hans Andersson";
+  console.log(firstName.length);
+  var initialer = firstName.substr(0,1);
+
+  // Fyll på initialer med första bokstaven i efternamnet.
+  initialer += " " + firstName.substr(firstName.indexOf(" ") + 1,1);
+
+  console.log(initialer);
+
+  </script>
+</html>

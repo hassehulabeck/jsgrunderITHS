@@ -1,0 +1,32 @@
+<html>
+<script>
+
+var kakor = [
+  "dröm",
+  "hallongrotta",
+  "biskvier",
+  "kanelbulle",
+  "havreflarn",
+  "finsk pinne",
+  "dammsugare",
+  "singoalla",
+  "chokladboll"
+];
+
+var kakfat = [];
+
+// Skapa kakfat
+for (let i = 0; i < 5; i++) {
+  kakfat.push(kakor[Math.floor(Math.random() * kakor.length)]);
+}
+
+console.log(kakfat);
+
+var kaka;
+
+while (kakfat.length > 1) {
+  kaka = kakfat.splice(Math.floor(Math.random() * kakfat.length),1);
+  console.log(kaka);
+}
+</script>
+</html>

@@ -1,0 +1,72 @@
+<html>
+<script>
+
+
+var deck = createDeck();
+
+console.log(deck);
+
+var kortlek = shuffle(deck);
+
+console.log(kortlek);
+
+
+var player1 = [], player2 = [];
+deal(5);
+console.log(player1);
+console.log(player2);
+
+function deal(antal) {
+  for(let i=0; i < antal; i++) {
+    player1.push(deck.pop());
+    player2.push(deck.pop());
+  }
+}
+
+// Sortera spelarnas händer (a och b är två kort)
+player1.sort(sortCards);
+player2.sort(sortCards);
+
+function sortCards(a, b){
+  // Sortera först efter suits
+  if (a.suit > b.suit) return 1;
+  if (a.suit < b.suit) return -1;
+
+  // Sortera i andra hand efter value.
+  if (a.value > b.value) return 1;
+  if (a.value < b.value) return -1;
+}
+
+console.log(player1);
+console.log(player2);
+
+
+function createDeck() {
+
+  var suits = ["Spades", "Hearts", "Clubs", "Diamonds"];
+  var ranks = [2,3,4,5,6,7,8,9,10, "J", "Q", "K", "A"];
+  var deck = [];
+
+  for(let s = 0; s < 4; s++) {
+    for (let r = 0; r < 13; r++) {
+      let card = {
+        suit: suits[s],
+        rank: ranks[r],
+        value: r  // egenskapen value för att kunna sortera enklare.
+      };
+      deck.push(card);
+    }
+  }
+  return deck;
+}
+
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<script>
+var array=[];
+var valdaTal = [];
+var summa = 0;
+
+// Skapa en array fylld med 20 tal.
+for (let i=0; i < 20; i++) {
+  let slumpTal = Math.ceil(Math.random() * 10);
+  array.push(slumpTal);
+}
+
+
+while (summa < 100) {
+  let slumpTal = Math.floor(Math.random() * array.length);
+
+  // Med splice plockar vi ut en del av en array.
+  // Men pass på - svaret vi får kommer i form av en array.
+  let tal = array.splice(slumpTal,1);
+
+  // Därför kan vi plocka ut värdet ur tal genom att referera till element 0 i tal, som nu blivit en array.
+  summa = summa + tal[0];
+  valdaTal.push(tal[0]);
+}
+console.log(valdaTal);
+
+</script>
+</html>
